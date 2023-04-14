@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Alteração de Dados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="8" offset-xs="2">
+      <ion-item>
+        <ion-input name="nome" placeholder="Nome Completo" [(ngModel)]="nome"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col size="8" offset-xs="2">
+      <ion-item>
+        <ion-input name="cpf" placeholder="CPF" [(ngModel)]="cpf"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col size="8" offset-xs="2">
+      <ion-button (click)="alterar()" expand="block" color="success">Alterar Dados</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

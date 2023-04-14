@@ -1,0 +1,29 @@
+<ion-content>
+    <ion-row>
+      
+        <ion-col offset-xs="2" size="8">
+          <ion-item>
+            <ion-icon name="person-outline" slot="start"></ion-icon>        
+            <ion-input type="name" placeholder="Nome" autofocus="true" [(ngModel)]="nome"></ion-input>
+          </ion-item>
+        </ion-col>
+  
+        <ion-col offset-xs="2" size="8">
+          <ion-item>
+            <ion-icon name="mail-outline" slot="start"></ion-icon>
+            <ion-input type="mail" placeholder="E-mail" [(ngModel)]="email"></ion-input>
+          </ion-item>
+        </ion-col>
+  
+        <ion-col offset-xs="2" size="8">
+          <ion-item>
+            <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+            <ion-input type="password" placeholder="Senha" [(ngModel)]="senha"></ion-input>
+          </ion-item>
+        </ion-col>
+  
+        <ion-col offset-xs="2" size="8">
+          <ion-button class="btn btnLogar" expand="block" (click)="cadastro()">Cadastrar</ion-button>
+        </ion-col>
+    </ion-row>
+</ion-content>

@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Produto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row >
+    <div *ngFor="let det of products$ | async">
+      {{ det.nome }}
+    </div>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Produtos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col *ngFor="let product of produtos" size="6">
+      <ion-card>
+        <ion-img src="{{ product.img }}"></ion-img>
+        <ion-card-header>
+          <ion-card-title>{{ product.nome }}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          {{ product.descricao }}
+        </ion-card-content>
+        <ion-button color="success">
+          <ion-icon name="cart-outline"></ion-icon>
+        </ion-button>
+        <!-- <ion-button color="primary" [routerLink]="['/detalhe', product.id]">Detalhes</ion-button> -->
+
+        <form (ngSubmit)="onSubmit()" name="campoOculto">
+          <input type="hidden" value="{{ product.id }}" name="id" [(ngModel)]="id">
+          <input type="hidden" value="{{ product.nome }}" name="nome" [(ngModel)]="nome">
+          <input type="hidden" value="{{ product.descricao }}" name="descricao" [(ngModel)]="descricao">
+          <input type="hidden" value="{{ product.img }}" name="img" [(ngModel)]="img">
+          <input type="hidden" value="{{ product.preco }}" name="preco" [(ngModel)]="preco">
+          <ion-button type="submit" color="primary">Detalhes</ion-button>
+        </form>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
